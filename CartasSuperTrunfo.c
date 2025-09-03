@@ -48,6 +48,12 @@ int main() {
     printf("Digite a quantidade de pontos turísticos da sua cidade: ");
     scanf("%d", &pontosTuristicos1);
 
+    //Gerando as novas variáveis da carta 1 solicitadas pelo desafio do nível Aventureiro
+    //Mesmo populacao1 sendo um int, não há necessidade de converter em float explicita ou implicitamente porque ao fazer uma operação com um float, o valor se torna float
+    //pib1 está sendo multimplicado por bilhão para o resultado aparecer em reais
+    float densidadePopulacional1 = populacao1 / area1;
+    float pibperCapita1 = (pib1 * 1000000000) / populacao1;
+
     // Obtenção dos dados da segunda carta
     printf("\nDigite o código do estado da sua nova carta: ");
     scanf(" %c", &codigoEstado2);
@@ -76,6 +82,12 @@ int main() {
 
     printf("Digite a quantidade de pontos turísticos da sua cidade: ");
     scanf("%d", &pontosTuristicos2);
+
+    //Gerando as novas variáveis da carta 2 solicitadas pelo desafio do nível Aventureiro
+    //Mesmo populacao2 sendo um int, não há necessidade de converter em float explicita ou implicitamente porque ao fazer uma operação com um float, o valor se torna float
+    //pib2 está sendo multimplicado por bilhão para o resultado aparecer em reais
+    float densidadePopulacional2 = populacao2 / area2;
+    float pibperCapita2 = (pib2 * 1000000000) / populacao2;
     
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
@@ -90,6 +102,9 @@ int main() {
     printf("Área: %.2fkm²\n", area1);
     printf("PIB: %.2f bilhões de reais\n", pib1);
     printf("Número de Pontos Turísticos: %d\n", pontosTuristicos1);
+    //Exibição dos dados obtidos da carta 1 do nível Aventureiro
+    printf("Densidade Populacional: %.2f hab/km²\n", densidadePopulacional1);
+    printf("PIB per Capita: %.2f reais\n", pibperCapita1);
 
     // Exibição dos dados obtidos da carta 2
     printf("\nCarta 2: \n");
@@ -100,6 +115,9 @@ int main() {
     printf("Área: %.2fkm²\n", area2);
     printf("PIB: %.2f bilhões de reais\n", pib2);
     printf("Número de Pontos Turísticos: %d\n", pontosTuristicos2);
+    //Exibição dos dados obtidos da carta 2 do nível Aventureiro
+    printf("Densidade Populacional: %.2f hab/km²\n", densidadePopulacional2);
+    printf("PIB per Capita: %.2f reais\n", pibperCapita2);
 
 
     return 0;
