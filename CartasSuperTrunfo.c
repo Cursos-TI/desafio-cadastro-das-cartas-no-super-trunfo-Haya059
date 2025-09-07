@@ -53,6 +53,7 @@ int main() {
     //pib1 está sendo multimplicado por bilhão para o resultado aparecer em reais
     float densidadePopulacional1 = populacao1 / area1;
     float pibperCapita1 = (pib1 * 1000000000) / populacao1;
+    float superPoder1 = (float) populacao1 + area1 + pib1 + (float) pontosTuristicos1 + pibperCapita1 + (densidadePopulacional1*(-1));
 
     // Obtenção dos dados da segunda carta
     printf("\nDigite o código do estado da sua nova carta: ");
